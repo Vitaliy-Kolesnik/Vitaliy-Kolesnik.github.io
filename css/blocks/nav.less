@@ -1,0 +1,96 @@
+//main: ../style.less
+
+
+.nav {
+   display: flex;//убрать пробелы между элементами меню
+   flex-wrap: wrap;//adaptation
+   height: 100%;
+   align-items: center;
+   margin-left: 230px;
+
+   @media @tablet {
+      margin-right: -10px;
+      margin-left: 0px;
+   }
+
+   @media @laptop{
+      margin-left: 0px;
+   }
+
+  @media @mobile {
+   //на планшете cкрываем навигацию
+     display: none;
+     width: 100%; //burger
+     height: auto;
+     padding: 15px;
+
+
+     position: absolute; //burger //Указывает, что элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента и нет. Положение элемента задается свойствами left, top, right и bottom, также на положение влияет значение свойства position родительского элемента. Так, если у родителя значение position установлено как static или родителя нет, то отсчет координат ведется от края окна браузера. Если у родителя значение position задано как fixed, relative или absolute, то отсчет координат ведется от края родительского элемента.
+     top: 100%; //burger
+     right: 0; //burger
+     z-index: 1000; //burger
+
+     background-color: #fff ;//burger
+     text-align: center; //burger
+
+     &.show{
+        display: flex;
+
+
+     }
+  }
+}
+.nav__link {
+   margin-left: 30px;
+   position: relative;
+   font-size: 14px;
+   color: @black;
+   text-transform: uppercase;
+   font-weight: 700;
+   align-items: center; //выравнивание по центру, по вертикали
+
+   cursor: pointer;
+
+   &:after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: @black;
+      position: absolute;
+      bottom: -5px; //отступ между полоской и текстом
+      left: 0;
+      z-index: 1;
+      transition: width .2s linear;
+
+   }
+
+
+
+   &:hover:not(.nav__link--btn) {
+//:not(.nav__link--btn) - убрать нижнее подчеркивание
+
+      &:after {
+         width: 100%;
+      }
+   }
+
+   // Модификаторы
+   &--btn {
+      padding: 10px 22px; //сверху-снизу.слева-справа
+      border: 2px solid @black; //меняет цвет
+      border-radius: 20px;
+      transition: background-color .2s linear, color .2s linear;
+
+      &:hover{
+         background-color: @black;
+         color: @white;//цвет текста
+      }
+}
+   @media @mobile {
+      width: 100%;//burger
+      margin-left: 0; //burger
+      padding: 7px 15px; //burger
+
+   }
+
+}

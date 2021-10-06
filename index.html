@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- https://fonts.google.com/ подключаем шрифты -->
+<!-- https://fonts.google.com/ подключаем шрифты -->
+<!-- https://www.youtube.com/watch?v=6QaXpMaBFv8 фиксируем header -->
+<head>
+   <meta charset="UTF-8">
+   <link rel="preconnect" href="https://fonts.google.com">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- адаптивность -->
+   <title>Portfolio</title>
+   <!--Подключаем библиотеку-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+   <header class="header" id="header">
+      <div class="container">
+         <div class="header__inner">
+            <div class="user">
+               <div class="user__avatar">
+                  <img src="images/photo1.png" alt="">
+               </div>
+               <div class="user__content">
+                  <div class="user__name lang" key="name"  >Vitaliy Kolesnik</div>
+                  <div class="user__prof lang" key="prof">Junior Front-End <br>Developer</br></div>
+               </div>
+            </div>
+            <nav class="nav" id="nav">
+               <div class="nav__link lang " key="works" href="#" data-scroll="#works" >works</div>
+               <div class="nav__link lang " key="about" href="#" data-scroll="#aboutMe">about me</div>
+               <!-- <a class="nav__link"  href="#">blog</a> -->
+               <div class="nav__link lang" key="reviews"  href="#" data-scroll="#reviews">reviews</div>
+               <div class="nav__link   nav__link--btn lang" key="hire" href="#"  data-modal="#modal_hire_me">hire me</div>
+            </nav>
+            <button class="burger" type="button" id="navToggle">
+               <img class="burger__icon" src="images/burger.png" alt="">
+            </button>
+            <div class="header__lang-en">
+               <button class="translate" id="en">EN</button>
+               <button class="translate" id="ru">RU</button>
+            </div>
+
+         </div>
+      </div>
+   </header>
+
+   <section class="intro" id="intro">
+      <div class="container">
+
+         <div class="intro__inner">
+            <div class="intro__content">
+               <h2 class="intro__subtitle lang" key="hello">Hello I am</h2>
+               <h1 class="intro__title lang" key="name">Kolesnik Vitaliy</h1>
+               <div class="intro__text lang" key="prof">Junior Front-End <br>Developer</div>
+
+               <div class="social">
+                   <a class="social__link" href="https://www.facebook.com/vitaliy.kolesnik.1" target="_blank">
+                      <img src="images/facebook.png" alt="">
+                     </a>
+
+                   <a class="social__link" href="https://t.me/Kolesnik_Vitaliy" target="_blank">
+                      <img src="images/telegram.png" alt="">
+                     </a>
+
+                   <a class="social__link" href="https://invite.viber.com/?g2=AQAgWGUggwffW01QMRIr5Jt9nG0TTeYPVDsPTbWxIY5Kv2eyrN4EudvzsSCD2MVS" target="_blank">
+                      <img src="images/viber.png" alt="">
+                     </a>
+
+                   <a class="social__link" href="https://www.linkedin.com/in/vitaliy-kolesnik-82625220b/" target="_blank" >
+                      <img src="images/linkedin.png" alt="">
+                     </a>
+                </div>
+                <a class="btn lang" href="#" data-modal="#modal_hire_me" key="hire">HIRE ME</a>
+                <button class="btn lang" key="resume" type="button" data-modal="#modal_resume">SEE MY RESUME</button>
+             </div>
+             <img class="intro__photo" src="images/photo.jpg" alt="">
+         </div><!-- container -->
+      </div><!-- intro -->
+   </section>
+
+<!-- Works -->
+
+<div class="works" id="works">
+   <div class="container">
+      <div class="works__nav">
+         <a class="works__nav-link" href="#" data-filter="all">All</a>
+         <a class="works__nav-link" href="#" data-filter="app">App</a>
+         <a class="works__nav-link" href="#" data-filter="website">Website</a>
+         <a class="works__nav-link" href="#" data-filter="interaction">Interaction</a>
+      </div>
+
+      <div class="portfolio">
+         <div class="portfolio__col" data-cat="app">
+            <div class="work" data-modal="#modal_project_1">
+               <img class="work__image" src="images/work-5.png" alt="">
+               <div class="work__content">
+                  <div class="work__cat">category: app</div>
+                  <div class="work__title">Test for Oops-IT</div>
+                  <div class="work__date">2021</div>
+               </div>
+            </div>
+         </div><!-- сетка, ширина ячейки -->
+
+         <div class="portfolio__col" data-cat="website">
+            <div class="work"  data-modal="#modal_project_2">
+               <img class="work__image" src="images/work-1.png" alt="">
+               <div class="work__content">
+                  <div class="work__cat">category: website</div>
+                  <div class="work__title">Portfolio</div>
+                  <div class="work__date">2021</div>
+               </div>
+            </div>
+         </div><!-- сетка, ширина ячейки -->
+
+         <div class="portfolio__col" data-cat="interaction">
+            <div class="work"  data-modal="#modal_project_1">
+               <img class="work__image" src="images/370x300.png" alt="">
+               <div class="work__content">
+                  <div class="work__cat">category: interaction</div>
+                  <div class="work__title">Project title</div>
+                  <div class="work__date">2021</div>
+               </div>
+            </div>
+         </div><!-- сетка, ширина ячейки -->
+
+         <div class="portfolio__col" data-cat="website">
+            <div class="work" data-modal="#modal_project_1">
+               <img class="work__image" src="images/works-3.png" alt="">
+               <div class="work__content">
+                  <div class="work__cat">category: website</div>
+                  <div class="work__title">Project title</div>
+                  <div class="work__date">2021</div>
+               </div>
+            </div>
+         </div><!-- сетка, ширина ячейки -->
+
+         <div class="portfolio__col" data-cat="interaction">
+            <div class="work" data-modal="#modal_project_1">
+               <img class="work__image" src="images/370x300.png" alt="">
+               <div class="work__content">
+                  <div class="work__cat">category: interaction</div>
+                  <div class="work__title">Project title</div>
+                  <div class="work__date">2021</div>
+               </div>
+            </div>
+         </div><!-- сетка, ширина ячейки -->
+
+         <div class="portfolio__col" data-cat="app">
+            <div class="work" data-modal="#modal_project_1">
+               <img class="work__image" src="images/370x300.png" alt="">
+               <div class="work__content">
+                  <div class="work__cat">category: app</div>
+                  <div class="work__title">Project title</div>
+                  <div class="work__date">2021</div>
+               </div>
+            </div>
+         </div><!-- сетка, ширина ячейки -->
+      </div><!-- portfolio -->
+      <!-- <div class="text__centr">
+         <a class="btn btn--small" href="#">LOAD MORE WORK</a>
+      </div> -->
+   </div><!-- container -->
+</div><!-- works -->
+<section class="about" id="aboutMe">
+
+   <div class="container">
+      <div class="about__inner">
+         <div class="about__photo">
+            <img class="img" src="images/designer_photo.png" alt="">
+         </div>
+         <div class="about__content">
+            <h3 class="about__title lang" key="aboutMe" >ABOUT ME</h3>
+            <h2 class="about__bigtitle lang" key="who" >Who am I?</h2>
+            <div class="about__text lang" key="hi" >
+                  <p>Hi! My name is Vitaliy and I am open to new opportunities.
+I want to find an interesting job. I have been working with Front End for a year now, constantly improving my skills gained at Infopulse University. It feels like I am ready for new challenges. <br> I have experience working as part of a team and individually.</p>
+<p>I like to spend my free time on fishing, I am interested in active types of recreation.</p><p>I would be glad to meet you!</p>
+
+            </div>
+            <a class="btn lang" key="hire" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                <button class="btn lang" key="resume" type="button" href="#" data-modal="#modal_resume">SEE MY RESUME</button>
+             </div>
+         </div><!-- about__content -->
+      </div><!-- about__inner -->
+   </div><!-- conteiner -->
+</section>
+
+<!--reviews------------------------------>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+    var disqus_config = function () {
+    this.page.url = 'http://welcome-on.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'welcome-on.co.ua'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://http-welcome-on-co-ua.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--  <div class="reviews">
+   <div class="container">
+
+      <div class="reviews__item">
+         <div class="reviews__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, architecto, quam sed similique suscipit laudantium perspiciatis laboriosam fugiat tempore quae ab excepturi corrupti temporibus cupiditate accusantium saepe accusamus ut a!</p>
+         </div>
+
+         <div class="reviews__author" id="reviews">
+            <img class="reviews__photo" src="images/103.png" alt="">
+            <div class="rewievs__name">Tomy Le Finger</div>
+            <div class="rewievs__company">Full stack developer</div>
+            <div class="rewievs__rating"></div>
+         </div>
+      </div> reviews__item
+   </div>container
+</div>reviews-->
+
+<footer class="footer">
+   <div class="container">
+      <div class="footer__inner">
+         <div class="footer__credits">
+
+            <!-- <div class="footer__copyright">
+               &copy; 2021 UI43 - Free Templates
+            </div> -->
+
+            <div class="footer__social">
+               <a href="https://www.facebook.com/vitaliy.kolesnik.1" target="_blank">
+                  <img  src="images/facebook.png" alt="">
+               </a>
+               <a  href="https://t.me/Kolesnik_Vitaliy" target="_blank">
+                  <img src="images/telegram.png" alt="">
+               </a>
+               <a  href="https://invite.viber.com/?g2=AQAgWGUggwffW01QMRIr5Jt9nG0TTeYPVDsPTbWxIY5Kv2eyrN4EudvzsSCD2MVS" target="_blank">
+                  <img src="images/viber.png" alt="">
+               </a>
+               <a  href="https://www.linkedin.com/in/vitaliy-kolesnik-82625220b/" target="_blank">
+                  <img src="images/linkedin.png" alt="">
+               </a>
+            </div>
+         </div>
+         <div class="footer__nav">
+            <a class="footer__nav-link lang " key="works" href="#" data-scroll="#works">Work</a>
+            <a class="footer__nav-link lang " key="about" href="#" data-scroll="#aboutMe">About ME</a>
+            <a class="footer__nav-link lang " key="reviews" href="#" data-scroll="#reviews">Reviews</a>
+            <a class="footer__nav-link footer__nav-link--btn lang " key="hire" href="#" data-modal="#modal_hire_me ">Hire me</a>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+<!--модальные окна  -->
+
+<div class="modal" id="modal_project_1">
+   <div class="modal__dialog">
+
+      <button class="modal__close" type="button" data-close>
+         <img src="images/modal-close.png" alt="">
+      </button>
+      <div class="modal-work">
+
+         <div class="modal-work__preview">
+            <div data-slider="slick">
+                <div><img class="modal-work__photo" src="images/work-51.png" alt=""></div>
+                <div><img class="modal-work__photo" src="images/790x780_1.png" alt=""></div>
+            </div>
+         </div>
+
+
+         <div class="modal-work__content">
+            <div class="modal-work__header">
+                <h3  class="modal-work__title">Test for Oops-IT </h3>
+                <div class="modal-work__info">category | 2021</div>
+            </div>
+            <div class="modal-work__client">
+
+               <div class="modal-work__client-title">Client:</div>
+               <div class="modal-work__client-company">Oops-IT</div>
+            </div>
+            <div class="modal-work__text">
+               <p>
+                  Test task for Oops-IT company.Real template from figma.
+                  Create menu header and adaptive this tamplate for mobile devices.Also integration of the menu into smc wordpress.
+               </p>
+               </div>
+
+            <div class="modal-work__footer">
+               <button class="modal-work__btn slickPrev" type="button"><img src="images/left-arrow.png" height="12" alt="">Previos</button>
+               <button class="modal-work__btn slickNext " type="button">Next  <img src="images/next.png" height="12" alt=""></button>
+            </div>
+         </div><!-- modal-work__content -->
+
+      </div><!-- modal-work -->
+   </div><!-- modal__dialog -->
+
+</div><!-- modal -->
+
+<div class="modal" id="modal_project_2">
+   <div class="modal__dialog">
+
+      <button class="modal__close" type="button" data-close>
+         <img src="images/modal-close.png" alt="">
+      </button>
+      <div class="modal-work">
+
+         <div class="modal-work__preview">
+            <div data-slider="slick">
+                <div><img class="modal-work__photo" src="images/work-11.png" alt=""></div>
+                <div><img class="modal-work__photo" src="images/work-2.png" alt=""></div>
+            </div>
+         </div>
+
+
+         <div class="modal-work__content">
+            <div class="modal-work__header">
+                <h3  class="modal-work__title">Portfolio </h3>
+                <div class="modal-work__info">category | 2021</div>
+            </div>
+            <div class="modal-work__client">
+
+               <div class="modal-work__client-title">Client:<p>Vitaly Kolesnik</p></div>
+               <div class="modal-work__client-company">Company</div>
+            </div>
+            <div class="modal-work__text">
+               <p>
+                  Portfolio web page is my first project became available online.
+Writing web pages is not my main job, so I spent about four weeks on creating a portfolio site.
+<p>The work was interesting, mainly because I used a new tool for myself.This is a LESS preprocessor.
+Developers use preprocessors to build CSS faster and it also helps me to better navigate the code,
+because the code is well structured.</p><p>
+In this project I also used Java Script and Java Script library Jquery.
+Java script I used to work modal windows, filter by projects, to work slides, fix the site header and
+for multilingual site.</p>
+               </p>
+
+            </div>
+
+            <div class="modal-work__footer">
+               <button class="modal-work__btn slickPrev" type="button"><img src="images/left-arrow.png" height="12" alt="">Previos</button>
+               <button class="modal-work__btn slickNext " type="button">Next  <img src="images/next.png" height="12" alt=""></button>
+            </div>
+         </div><!-- modal-work__content -->
+
+      </div><!-- modal-work -->
+   </div><!-- modal__dialog -->
+
+</div><!-- modal -->
+
+
+<div class="modal" id="modal_resume">
+   <div class="modal__dialog">
+      <button class="modal__close" type="button" data-close >
+         <img src="images/modal-close.png" alt="">
+      </button>
+
+         <div class="modal__content">
+            <h3 class="modal__title text-center ">RESUME</h3>
+            <!-- text-center - добавляем модификатор, чтобы сделать заголовок слева заголовок Lets talk -->
+            <div class="text-center">
+                <a class="btn btn--thin" href="СV_kolesnik_EN.pdf" target="_blank">DOWNLOAD PDF</a>
+                <a class="btn btn--thin" href="#">PRINT</a>
+            </div>
+
+            <div class="timeline">
+
+               <div class="timeline__col timeline__col--left">
+                  <h4 class="timeline__title ">CARREER</h4>
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2014-2021</b></div>
+                     <h5 class="timeline__subtitle">Staff</h5>
+                     <div class="timeline__position">Engineer</div>
+                     <div class="timeline__text">
+                        <div class="timeline__company">Ukraine mobile company “Kyivstar’’</div>
+                        Administration of local and transport
+                                    Networks (DWDM, SDH, IP-MPLS, RAN).
+                                    Operation and maintenance mobile
+                                    base station (Huawei, Ericsson)
+                     </div>
+                  </div>
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2012-2014 </b></div>
+                     <h5 class="timeline__subtitle">Staff</h5>
+                     <div class="timeline__position">Engineer</div>
+                     <div class="timeline__text">
+                        <div class="timeline__company">Ukraine mobile company “Kyivstar’’</div>
+                        Experience of operation and maintenance
+                                    Transmission Digital Radio Relay Systems.
+                                    (Huawei, Ericsson)Experience of
+                                     Modernization mobile network equipment.
+                                    (Transmission and Access level).
+                     </div>
+                  </div>
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2007-2012</b></div>
+                     <h5 class="timeline__subtitle">Staff</h5>
+                     <div class="timeline__position">Engineer</div>
+                     <div class="timeline__text">
+                     <div class="timeline__company">Ukraine mobile company “Golden Telecom’’</div>
+                        Operation and maintenance FTTB network FTTB IP-MPLS
+                     </div>
+                  </div>
+
+                  <h4 class="timeline__title ">Skills</h4>
+                  <!-- <div class="progress-bar"> -->
+                     <div class="timeline__text">  Modernization/ Maintenance of networks
+                        DWDM, SDH, IP-MPLS (Access and Transmission Level).
+        Operation of mobile stations. Worked with equipment network-switch such as
+        Cisco, Huawei, D-link, and Alcatel.<br>
+         After completing the courses, I continue to study Java Script/HTML/CSS on my own.
+                     </div>
+               </div><!--  timeline__col--left -->
+
+               <div class="timeline__col timeline__col--right">
+
+                  <h4 class="timeline__title ">TRAININGS</h4>
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2019 (7 - month)</b></div>
+                     <h5 class="timeline__subtitle">Info pulse univer</h5>
+                     <div class="timeline__position">Frontend developer<br>
+                                       Basic knowledge:<br>
+                                    -	Java Script<br>
+                                       -	JavaScript library jQuery<br>
+                                    -	backwards-compatible language LESS<br>
+                                       -	HTML/CSS<br>
+                                       -WordPress
+                     </div>
+                  </div>
+
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2018(6 - month)</b></div>
+                     <h5 class="timeline__subtitle"> SEDICOMM University</h5>
+                     <div class="timeline__position">CCNA / CCNA R&S <br>
+
+                     </div>
+                  </div>
+
+                  <h4 class="timeline__title ">Education</h4>
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2017</b></div>
+                     <h5 class="timeline__subtitle">National Academy of  Telecommunications</h5>
+                     <div class="timeline__position">Education level: Specialist<br>
+                                    Completed the full course of
+                                    Telecommunications and Radio Engineering
+                     </div>
+                  </div>
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2010</b></div>
+                     <h5 class="timeline__subtitle">National Academy of  Telecommunications</h5>
+                     <div class="timeline__position">Education level: Bachelor<br>
+                                    Completed the full course of
+                                    Automation and computer integrated
+                                    systems
+                     </div>
+                  </div>
+
+
+
+                  <div class="timeline__item">
+                     <div class="timeline__date"><b>2005 </b></div>
+                     <h5 class="timeline__subtitle">Kiev College of Communications</h5>
+                     <div class="timeline__position">Education level: Junior Specialist<br>
+                                    Maintenance of computer systems and
+                                    networks
+                     </div>
+                  </div>
+
+
+                   <!--  <div class="progress-bar__item">
+                        <div class="progress-bar__left">
+                            <div class="progress-bar__title">UI/Ux design</div>
+                        </div>
+                        <div class="progress-bar__right">
+                           <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style= "width:90%"></div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar__item">
+                        <div class="progress-bar__left">
+                            <div class="progress-bar__title">UI/Ux design</div>
+                        </div>
+                        <div class="progress-bar__right">
+                           <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style= "width:60%"></div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar__item">
+                        <div class="progress-bar__left">
+                            <div class="progress-bar__title">UI/Ux design</div>
+                        </div>
+                        <div class="progress-bar__right">
+                           <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style= "width:70%"></div>
+                          </div>
+                        </div>
+                    </div>progress-bar__item -->
+                  </div><!-- timelene__item -->
+               </div><!-- timeline__col--right -->
+
+            </div><!-- timeline -->
+            <div class="text-center">
+               <a class="btn" href="#" data-modal="#modal_hire_me">Hire me</a>
+            </div>
+
+       </div><!-- modal__content -->
+   </div><!-- modal__dialog -->
+</div><!-- modal -->
+
+<div class="modal" id="modal_hire_me">
+   <div class="modal__dialog modal__dialog--sm">
+      <button class="modal__close" type="button" data-close>
+         <img src="images/modal-close.png" alt="close">
+      </button>
+
+         <div class="contact">
+            <div class="contact__left">
+               <h3 class="modal__title mb-0">LET'S TALK!</h3>
+               <div class="modal__subtitle">CALL ME OR SEND ME A REQUEST</div>
+               <ul class="contact__info">
+                  <li class="contact__info-item">
+                     <img class="contact__info-icon" src="images/call.png" alt="">
+                     067 224 07 36
+                  </li>
+                  <li class="contact__info-item">
+                     <img class="contact__info-icon" src="images/email.png" alt="">
+                     vitaliym58@gmail.com
+                  </li>
+               </ul>
+
+               <div class="social">
+                   <a class="social__link" href="https://www.facebook.com/vitaliy.kolesnik.1" target="_blank">
+                      <img src="images/facebook.png" alt="">
+                     </a>
+
+                   <a class="social__link" href="https://t.me/Kolesnik_Vitaliy" target="_blank" target="_blank">
+                      <img src="images/telegram.png" alt="">
+                     </a>
+
+                   <a class="social__link" href="https://invite.viber.com/?g2=AQAgWGUggwffW01QMRIr5Jt9nG0TTeYPVDsPTbWxIY5Kv2eyrN4EudvzsSCD2MVS" target="_blank">
+                      <img src="images/viber.png" alt="">
+                     </a>
+
+                   <a class="social__link" href="https://www.linkedin.com/in/vitaliy-kolesnik-82625220b/" target="_blank" >
+                      <img src="images/linkedin.png" alt="">
+                     </a>
+                </div>
+
+               <form class="form" action="/" method="post">
+                  <div class="form__group">
+                      <label class="form__label" for="input-email"> Adress e-mail</label>
+                      <input class="form__input" name="input-email" type="text" id="input-email" placeholder="Adress e-mail">
+                  </div>
+                  <div class="form__group">
+                      <label class="form__label" for="input-text"> Request</label>
+                      <textarea class="form__textarea" name="input-text" id="input-text" placeholder="Type your request" ></textarea>
+                  </div>
+                  <div class="text-right">
+                     <button class="btn" type="submit">Send</button>
+                  </div>
+               </form>
+            </div>
+         </div><!-- contact -->
+
+   </div><!-- modal__dialog -->
+</div><!-- modal -->
+
+
+
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,71 @@
+//main: ../style.less
+
+.modal {
+   display: none;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(6, 15, 49, 0.9);
+   padding: 0 15px;
+
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;//поверх всего содержимого
+   overflow: auto;
+
+   //JS
+   &.show {
+      display: flex;
+   }
+
+}
+
+.modal__dialog {
+   width: 100%;
+   max-width: 1200px;
+   margin: auto;
+   position: relative;
+   background-color: #fff;
+
+   &--sm {
+      max-width: 900px;
+   }
+
+}
+
+.modal__close {
+   width: 36px;
+   height: 40px;
+   cursor: pointer;
+   padding: 0;//убираем стандартные настройки
+   background: none; //убираем стандартные настройки
+   border: 0; //убираем стандартные настройки
+   position: absolute;
+   top: 13px;
+   right: 13px;
+   z-index: 1;
+
+   transition: transform .2s linear;
+
+   &:hover {
+      transform: translateY(-3px);
+   }
+
+}
+
+.modal__content {
+   padding: 60px 15px;
+}
+
+.modal__title {
+   margin-bottom: 45px;
+   font-size: 45px;
+   text-transform: uppercase;
+   color: @black;
+   font-weight: 700;
+   // text-align: center; - убираем чтобы сделать заголовок Lets talk слева
+
+   @media @mobile-sm {
+      font-size: 30px;
+   }
+}

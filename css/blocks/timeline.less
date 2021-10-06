@@ -1,0 +1,82 @@
+//main: ../style.less
+
+.timeline {
+   display: flex;
+   margin: 63px auto;//auto чтобы выровнять по центру
+   width: 100%;
+   max-width: 768px;
+   position: relative;
+
+   &:before{//делаем вертикальную полоску
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+
+      background-color: @black;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 1; //позиционированные элементы на веб-странице
+   }
+}
+
+.timeline__col {
+   width: 50%;
+
+   &--left {
+      text-align: right;
+      padding-right: 40px;
+   }
+   &--right {
+
+      padding-left: 40px;
+   }
+}
+.timeline__title {
+   margin-bottom: 38px;
+   font-size: 18px;
+   color: @black;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+
+.timeline__item {
+   margin-bottom: 38px;
+
+   &:last-child {
+      margin-bottom: 0;//убираем отступ у последнего елемента
+   }
+
+}
+
+.timeline__date {
+   display: block;
+   margin-bottom: 12px;
+   text-decoration: underline;
+   font-size: 14px;
+   color: @black;
+}
+
+.timeline__subtitle {
+   margin-bottom: 5px;
+   font-size: 16px;
+   color: @black;
+   font-weight: 700;
+}
+.timeline__position {
+    font-size: 14px;
+    color: @black;
+    font-style: italic;
+}
+.timeline__company{
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.timeline__text {
+   margin-top: 12px;
+   font-size: 12px;
+   line-height: 18px;
+   color: @gray;
+   font-weight: 300;
+}

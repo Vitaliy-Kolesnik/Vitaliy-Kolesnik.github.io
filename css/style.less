@@ -1,0 +1,61 @@
+//compress:true;
+
+html{
+   font-size: 15px;
+}
+body{
+   margin: 0;
+   font-family: 'Montserrat',
+   sans-serif;
+   font-size: 1rem;//1rem- 15px
+   color: @black;
+
+   &.no-scroll {//модальные окна, убрать скролл
+      overflow: hidden; //Отображается только область внутри элемента, остальное будет скрыто.
+   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;//убираем отступы у заголовка
+}
+
+*,
+*:before,
+*:after{
+   box-sizing: border-box; //Свойства width и height включают в себя значения полей и границ, но не отступов (margin). Эта модель используется браузером Internet Exporer в режиме несовместимости.
+}
+
+//vender=======перед blocks чтобы переопределять стили
+@import "vender/slick";
+
+
+//blocks
+
+@import "vars"; //подключаем файл с переменными для использование цветов
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/works";
+@import "blocks/portfolio";
+@import "blocks/work";
+@import "blocks/helpers";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-work";
+@import "blocks/timeline";
+@import "blocks/progress-bar";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/burger";
+@import "blocks/header__lang-en";
+
+
+
+
+

@@ -1,0 +1,45 @@
+//main: ../style.less
+
+.form__group {
+   margin-bottom: 27px;
+}
+
+.forn__label {
+   display: inline-block; //для того чтобы сделать отступ margin-bottom: 9px;
+   margin-bottom: 9px;
+   margin-left: 20px;
+   font: 12px;
+   color: @black;
+   font-weight: 700;
+
+}
+
+.form__input,
+.form__textarea
+ {
+   display: block;
+   width: 100%;
+
+   padding: 16px 21px;
+
+   font-family: inherit; //наследие у родителя Body
+   font-size: 12px;
+   font-weight: 300;
+   line-height: 16px;
+   border-radius: 27px;
+   border: 1px solid fade(#707070, 30%);
+   color: @black;
+
+   &:focus {
+      outline: none;
+      border-color: #36abc7;
+   }
+   &::placeholder {
+      color: @black;
+   }
+}
+
+.form__textarea {
+   height: 200px;
+   resize: none;
+}

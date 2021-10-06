@@ -1,0 +1,31 @@
+//main: ../style.less
+
+.header{
+   padding-top: 5px;
+   position: relative; //Положение элемента устанавливается относительно его исходного места. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения.
+
+   //фиксируем фапку при скроле на моюильных устройствах
+
+   @media @mobile {
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+   }
+}
+.header.fixed {
+   position: fixed;
+   background-color: #EFEFEF;
+   width: 100%;
+   height: 0 auto;
+   z-index: 1;
+}
+
+.header__inner{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;//все элементы по центру
+}

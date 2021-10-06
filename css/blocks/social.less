@@ -1,0 +1,16 @@
+//main: ../style.less
+
+.social{
+   margin-bottom: 42px;
+   display: flex;//становиться контейнером, для того чтобы сдклать отступы между иконками
+}
+.social__link{
+   margin-right: 6px;
+   text-decoration: none;
+//псевдокласс hover-поднимаеться иконка при наводе
+
+transition: transform .2s linear;
+   &:hover {
+      transform: translateY(-3px);
+   }
+}

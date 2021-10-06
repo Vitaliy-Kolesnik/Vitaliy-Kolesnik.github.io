@@ -1,0 +1,81 @@
+//main: ../style.less
+
+.footer {
+   background-color: @black;
+   padding: 15px 0 ;
+   margin-top: 200px;
+}
+
+.footer__inner {
+   display: flex;
+   // flex-wrap: wrap;//адаптивность
+  justify-content: space-between;
+
+   @media @mobile-sm {
+    flex-wrap: wrap; //адаптивность
+   }
+}
+
+.footer__credits {
+   display: flex;
+
+   align-items: center;
+
+
+@media @mobile-sm {
+   padding-left: 30%;
+    width: 100%;
+}
+}
+
+
+
+.footer__social {
+   display: flex;
+   align-items: center;
+
+   a {
+      margin-right: 17px;
+      text-decoration: none;
+
+   }
+}
+
+.footer__nav {
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   display: flex;
+
+    @media @tablet {
+       width: 100%;
+    }
+
+    @media @mobile-sm {
+      font-size: 12px;
+    }
+}
+
+.footer__nav-link {
+   margin-left: 20px;
+   color: @white;
+   padding-right: 10px;
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: underline;//подчеркивание при наведении
+   }
+
+   &--btn {
+      border: 1px solid @gray-light;
+      border-radius: 20px;
+      padding: 6px 20px;
+
+      &:hover {
+         text-decoration: none;
+         background-color: @gray-light;
+         color: @black;
+      }
+   }
+
+}

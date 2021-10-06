@@ -1,0 +1,28 @@
+//main: ../style.less
+
+.portfolio {
+   display: flex;
+   flex-wrap: wrap;//разрешаем перенос строки
+   margin: 0 -15px;// что блок portfolio начинался с начала контейнера
+   margin-bottom: 42px;
+
+   @media @tablet {
+      margin: 0 -31px;
+   }
+
+   @media @laptop {
+      margin-right: 0 85px;
+   }
+}
+
+.portfolio__col {
+   flex-basis: 33.3333%;//width
+   padding: 15px;
+
+   @media @mobile {
+      flex-basis: 50%;
+   }
+   @media @mobile-sm {
+      flex-basis: 100%;
+   }
+}

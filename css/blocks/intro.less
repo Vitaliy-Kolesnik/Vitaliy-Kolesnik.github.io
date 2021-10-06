@@ -1,0 +1,72 @@
+//main: ../style.less
+
+
+.intro {
+   @media @mobile {
+      margin-top: 100px;
+   }
+}
+.intro__inner{
+   display: flex;
+   border-bottom: 1px solid fade(@gray, 30%);
+   padding-bottom: 120px;
+   padding-top: 100px;
+   position: relative;
+   background: url("../images/symbols.png") right bottom no-repeat;
+
+   // отступ сверху/снизу картинки
+   @media @tablet {
+      padding-bottom: 70px;
+      padding-top: 70px;
+      // размер фона картинки
+      background-size: 415px auto;
+   }
+}
+
+.intro__subtitle{
+   font-size: 32px;
+   color: @black;
+   font-weight: 200;
+
+    @media @tablet {
+       font-size: 16px;
+    }
+}
+.intro__content{
+   width: 50%;
+    @media @mobile-sm {
+       width: 100%;
+    }
+}
+
+.intro__photo{
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 1;
+// делаем меньше картинку для фото на планшете
+   @media @tablet {
+      width: 245px;
+   }
+   @media @mobile-sm {
+      display: none;
+   }
+
+}
+.intro__title{
+   font-size: 45px;
+   color: @black;
+   font-weight: 700;
+   margin-bottom: 5px;
+
+   @media @tablet {
+      font-size: 25px;
+   }
+
+}
+.intro__text{
+   margin-bottom: 5px;
+   font-size: 18px;
+   color: fade(@black, 70%);
+
+}

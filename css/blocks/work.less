@@ -1,0 +1,39 @@
+//main: ../style.less
+.work {
+   overflow: hidden;//обрезаем картинку
+  // border-radius: 10px;
+   box-shadow: 0 0 4px
+   fade(#000, 25%);
+
+   &:hover {
+       box-shadow: 0 0 25px fade(#000, 25%);
+   }
+   transition: box-shadow .2s linear;
+
+}
+.works__image {
+   display: block;//для адаптивности картинки
+   max-width: 100%;//для адаптивности картинки
+   height: auto;//для адаптивности картинки
+}
+.work__content {
+   border: 1px solid;
+   padding: 10px 12px;
+   display: flex; //для того чтобы подвинуть дату
+   justify-content: space-between; //для того чтобы подвинуть дату
+}
+.work__cat {
+   font-size: 12px;
+   color: @black;
+   text-transform: uppercase;
+   margin-bottom: 5px;
+}
+
+.work__title {
+
+   font-size: 16px;
+   color: @black;
+   text-transform: uppercase;
+   font-weight: 700;
+
+}
